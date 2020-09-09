@@ -40,7 +40,7 @@ const App = () => {
 
 
   useEffect(()=>{
-    axios.get('http://localhost:1234/question/getQuestion')
+    axios.get('https://infinite-forest-32394.herokuapp.com/question/getQuestion')
     .then(function (response) {
       question.current = response.data.result;
     })
@@ -122,7 +122,7 @@ const App = () => {
       name: localStorage.getItem("userName"),
       score: localStorage.getItem("score"),
     };
-    axios.post('http://localhost:1234/user/addUser', { user })
+    axios.post('https://infinite-forest-32394.herokuapp.com/user/addUser', { user })
     .then(function (response) {
       console.log(response.data.status);
     })

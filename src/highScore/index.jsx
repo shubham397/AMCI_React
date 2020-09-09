@@ -23,7 +23,7 @@ const App = () => {
   const [tdata,setTdata] = useState("");
 
   useEffect(()=>{
-    axios.get('http://localhost:1234/user/getHighScore')
+    axios.get('https://infinite-forest-32394.herokuapp.com/user/getHighScore')
       .then(function (response) {
         const data = response.data.result.map((newData)=>{
           return {name:newData.name, score:newData.score}
